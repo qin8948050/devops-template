@@ -43,8 +43,7 @@
     component: './TableList',
   },
   {
-    path: '/demo',
-    name: 'demo',
+    path: '/demo/:pageId',
     component: './Demo',
   },
   {

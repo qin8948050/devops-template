@@ -99,5 +99,13 @@ declare namespace API {
     type?: NoticeIconItemType;
   };
 
-  type Menu = {};
+  type Menu = {
+    
+  };
+  
+  type RespType= {
+    status?:number;
+    msg?:string;
+    data?:any;
+  }
 }

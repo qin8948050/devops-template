@@ -3,6 +3,7 @@ import { render as renderAmis, ToastComponent, AlertComponent } from 'amis';
 import { alert, confirm } from 'amis/lib/components/Alert';
 import { toast } from 'amis/lib/components/Toast';
 import axios from 'axios';
+import copy from 'copy-to-clipboard';
 import '../../node_modules/amis/lib/themes/default.css';
 import '../../node_modules/amis/lib/themes/cxd.css';
 

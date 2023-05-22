@@ -8,6 +8,7 @@ import type { RunTimeLayoutConfig } from 'umi';
 import { history, Link } from 'umi';
 import defaultSettings from '../config/defaultSettings';
 import { currentUser as queryCurrentUser } from './services/ant-design-pro/api';
+import { getMenuData } from './services/basic/api';
 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -105,16 +106,11 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     },
     menu: {
       params: {
-        userId: initialState?.currentUser?.userid,
+        // userId: initialState?.currentUser?.userid,
       },
       request: async (params, defaultMenuData) => {
-        const menuData: MenuDataItem[] = [
-          {
-            path: '/a',
-            name: 'a啦',
-          },
-        ];
-        return menuData;
+        const {data}=await getMenuData();
+        return data;
       },
     },
     ...initialState?.settings,
